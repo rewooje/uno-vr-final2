@@ -2,25 +2,21 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>VR 360 거실 뷰어</title>
+  <title>VR 360 거실</title>
   <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
   <script src="https://photo-sphere-viewer-data.netlify.app/psv.min.js"></script>
   <style>
-    html, body { margin: 0; padding: 0; height: 100%; }
+    html, body { margin: 0; height: 100%; }
     #viewer { width: 100%; height: 100%; }
   </style>
 </head>
 <body>
   <div id="viewer"></div>
+
   <script>
     const viewer = new PhotoSphereViewer.Viewer({
-      container: document.getElementById('viewer'),
-      panorama: '완성거실.png',  // 네 png 파일 이름 정확히!
-      defaultYaw: '180deg',      // 시작 방향 (필요시 수정 가능)
-      navbar: [
-        'zoom',
-        'fullscreen'
-      ]
+      container: document.querySelector('#viewer'),
+      panorama: '완성거실.png',  // 또는 livingroom.png 등
     });
   </script>
 </body>
